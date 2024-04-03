@@ -1,0 +1,12 @@
+<input type="text" [(ngModel)]="flightNumber" placeholder="Filter by flight number">
+<button (click)="fetchLaunchesByFlightNumber()" class="flight-button">Filter</button>
+
+<input type="text" [(ngModel)]="launchYear" placeholder="Filter by year">
+<button (click)="fetchLaunchesByYear()" class="year-button">Filter</button>
+
+<div *ngFor="let mission of missions" class="mission-item" (click)="selectMission(mission)">
+    {{ mission.mission_name }}
+    <app-missiondetails *ngIf="selectedMission?.flight_number === mission.flight_number"
+                        [missionDetails]="selectedMission">
+    </app-missiondetails>
+</div>

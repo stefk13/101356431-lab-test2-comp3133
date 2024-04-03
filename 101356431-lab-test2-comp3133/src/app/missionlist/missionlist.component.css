@@ -1,0 +1,18 @@
+.mission-item {
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+  }
+  
+  .mission-item:hover {
+    background-color:  rgb(154, 156, 253);
+  }
+  
+  ::selection {
+    background-color: black;
+    color: white;
+  }
+
+  .flight-button{
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
